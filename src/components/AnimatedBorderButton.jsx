@@ -10,16 +10,16 @@ export const AnimatedBorderButton = () => {
                             px-4 py-2 text-lg font-medium rounded-full overflow-visible
                             animated-border">
                             {/* Animated SVG border */}
-                            <svg className="absolute left-0 top-0 w-full pointer-events-auto"
+                            <svg className="absolute left-0 top-0 w-full h-full pointer-events-none"
                             viewBox="0 0 200 60"
                             preserveAspectRatio="none"
-                            style={{ overflow: "visible "}}>
-                        <path d="M 30,1 A 29,29 0 0 0 1,30 L 1, 30 A 29, 29 0 0 0 30, 59"
+                            style={{ overflow: "visible" }}>
+                        <path d="M 30,2 L 170,2 A 28,28 0 0 1 198,30 A 28,28 0 0 1 170,58 L 30,58 A 28,28 0 0 1 2,30 A 28,28 0 0 1 30,2 Z"
                             fill="none"
                             stroke="var(--color-primary)"
                             strokeWidth="2"
-                            strokeDasharray="400 500"
-                            strokeDashoffset="400"
+                            strokeDasharray="120 336"
+                            strokeDashoffset="0"
                             strokeLinecap="round"
                             strokeLinejoin="round"
                             className="animated-border-path"/>
