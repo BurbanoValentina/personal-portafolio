@@ -123,10 +123,10 @@
 
   @keyframes animated-border {
     0%{
-      stroke-dashoffset: 400;
+      stroke-dashoffset: 0;
     }
     100% {
-      stroke-dashoffset: -550;
+      stroke-dashoffset: -456;
     }
   }
 
