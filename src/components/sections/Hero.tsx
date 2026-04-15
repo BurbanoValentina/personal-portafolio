@@ -32,8 +32,8 @@ const generateDots = (): Dot[] => {
   return [...Array(30)].map((_, index) => ({
     left: (index * 3.33) % 100,
     top: (index * 1.67) % 100,
-    duration: 15 + (index % 20),
-    delay: (index % 5),
+    duration: 25 + (index % 10),
+    delay: 0,
   }));
 };
 
