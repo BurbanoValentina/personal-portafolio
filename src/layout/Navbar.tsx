@@ -1,22 +1,22 @@
 import { Menu, X } from "lucide-react";
-import { Button } from "@/components/Button";
 import { useState, useEffect } from "react";
-
-interface NavLink {
-  href: string;
-  label: string;
-}
-
-const navLinks: NavLink[] = [
-  { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
-  { href: "#experience", label: "Experience" },
-  { href: "#testimonials", label: "Testimonials" },
-];
+import { useTheme } from "@/contexts/ThemeContext";
+import { useLang } from "@/contexts/LanguageContext";
+import "flag-icons/css/flag-icons.min.css";
 
 export const Navbar = (): React.JSX.Element => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState<boolean>(false);
+  const { theme, toggleTheme } = useTheme();
+  const { lang, toggleLang, t } = useLang();
+
+  const navLinks = [
+    { href: "#about", label: t.nav.about },
+    { href: "#projects", label: t.nav.projects },
+    { href: "#experience", label: t.nav.experience },
+    { href: "#testimonials", label: t.nav.testimonials },
+    { href: "#footer", label: t.nav.contact },
+  ];
 
   useEffect(() => {
     const handleScroll = (): void => setScrolled(window.scrollY > 50);
@@ -31,6 +31,7 @@ export const Navbar = (): React.JSX.Element => {
       }`}
     >
       <nav className="container mx-auto px-6 flex items-center justify-between">
+        {/* Logo */}
         <a
           href="#"
           className="text-xl font-bold tracking-tight hover:text-primary transition-colors"
@@ -38,7 +39,7 @@ export const Navbar = (): React.JSX.Element => {
           VB<span className="text-primary">.</span>
         </a>
 
-        {/* Desktop Nav */}
+        {/* Desktop Nav — Center pills including Contact */}
         <div className="hidden md:flex items-center gap-1">
           <div className="glass rounded-full px-2 py-1 flex items-center gap-1">
             {navLinks.map((link, index) => (
@@ -53,11 +54,27 @@ export const Navbar = (): React.JSX.Element => {
           </div>
         </div>
 
-        {/* CTA Button */}
-        <div className="hidden md:block">
-          <a href="#contact">
-            <Button size="sm">Contact Me</Button>
-          </a>
+        {/* Right — Theme toggle + Language toggle */}
+        <div className="hidden md:flex items-center gap-2">
+          {/* Dark/Light toggle */}
+          <button
+            onClick={toggleTheme}
+            className="w-9 h-9 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300 flex items-center justify-center"
+            title={theme === "dark" ? "Light mode" : "Dark mode"}
+          >
+            <span className="material-symbols-outlined text-[18px] leading-none">
+              {theme === "dark" ? "light_mode" : "dark_mode"}
+            </span>
+          </button>
+
+          {/* Language toggle */}
+          <button
+            onClick={toggleLang}
+            className="w-9 h-9 rounded-full glass hover:bg-primary/10 transition-all duration-300 flex items-center justify-center overflow-hidden"
+            title={lang === "en" ? "Cambiar a Español" : "Switch to English"}
+          >
+            <span className={`fi ${lang === "en" ? "fi-us" : "fi-es"} text-lg`} />
+          </button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -83,9 +100,25 @@ export const Navbar = (): React.JSX.Element => {
                 {link.label}
               </a>
             ))}
-            <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
-              <Button className="w-full">Contact Me</Button>
-            </a>
+            {/* Mobile toggles */}
+            <div className="flex items-center gap-3 pt-4 border-t border-border">
+              <button
+                onClick={toggleTheme}
+                className="flex items-center gap-2 px-4 py-2 rounded-full glass text-sm"
+              >
+                <span className="material-symbols-outlined text-lg leading-none">
+                  {theme === "dark" ? "light_mode" : "dark_mode"}
+                </span>
+                {theme === "dark" ? "Light" : "Dark"}
+              </button>
+              <button
+                onClick={toggleLang}
+                className="flex items-center gap-2 px-4 py-2 rounded-full glass text-sm"
+              >
+                <span className={`fi ${lang === "en" ? "fi-us" : "fi-es"} text-lg`} />
+                {lang === "en" ? "Español" : "English"}
+              </button>
+            </div>
           </div>
         </div>
       )}
