@@ -1,32 +1,62 @@
 # Personal Portfolio — Valentina Burbano
 
-Portfolio personal construido con **React + TypeScript + Tailwind CSS v4 + Vite**.
+Portfolio personal construido con **React 19 + TypeScript + Tailwind CSS v4 + Vite**.
 
-## Tech Stack
+## 🚀 Tech Stack
 
-- **React 19** con **TypeScript**
-- **Tailwind CSS v4** (plugin de Vite)
-- **Vite 8** (beta)
-- **Lucide React** para íconos
-- **Google Fonts**: Outfit + Playfair Display
+- **React 19.2.0** con **TypeScript**
+- **Tailwind CSS v4.1.18** (plugin de Vite)
+- **Vite 8** 
+- **Lucide React** - Íconos
+- **ESLint** - Linting
 
-## Instalación
+## 📦 Instalación y Desarrollo
 
 ```bash
+# Instalar dependencias
 npm install
+
+# Servidor de desarrollo
 npm run dev
+
+# Build producción
+npm run build
+
+# Preview de producción
+npm run preview
+
+# Lint
+npm run lint
 ```
 
-## Scripts
+## 📁 Estructura del Proyecto
 
-| Comando         | Descripción                          |
-|-----------------|--------------------------------------|
-| `npm run dev`   | Servidor de desarrollo               |
-| `npm run build` | Compila TypeScript + build producción |
-| `npm run lint`  | Ejecuta ESLint                       |
-| `npm run preview` | Preview del build de producción    |
+```
+src/
+├── components/
+│   ├── common/       → Componentes reutilizables
+│   ├── layout/       → Navbar, Footer
+│   ├── sections/     → Hero, About, Experience, Projects, Testimonials
+│   └── index.ts
+├── config/           → Constantes
+├── contexts/         → React Context (Theme, Language)
+├── hooks/            → Custom Hooks
+├── i18n/             → Internacionalización (es, en)
+├── types/            → TypeScript types
+├── utils/            → Utilidades
+├── assets/           → Imágenes, Iconos
+├── App.tsx
+├── main.tsx
+└── index.css         → Tailwind + Custom theme
+```
 
-## Estructura del Proyecto
+## 🎨 Características
+
+- ✅ Modo Oscuro/Claro
+- ✅ Internacionalización (ES/EN)
+- ✅ Diseño Responsivo con Tailwind CSS
+- ✅ TypeScript type-safe
+- ✅ Componentes Reutilizables
 
 ```
 src/
