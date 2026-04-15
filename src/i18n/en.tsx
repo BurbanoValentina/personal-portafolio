@@ -29,7 +29,7 @@ export const en: Translations = {
     titleHighlight: "one component at a time.",
     bio1: "I specialize in full-stack development for web and mobile applications. I have a strong passion for JavaScript and build dynamic, responsive interfaces using React, Next.js, TypeScript, and Angular. On the backend, I develop scalable systems with C#, Java, Spring Boot, Node.js, and Django, working with PostgreSQL and MongoDB.",
     bio2: "I blend technical excellence with innovation to deliver intuitive, high-performance solutions. I leverage modern tools like Docker, AWS, Azure, Vercel, and GitHub Actions to build and deploy reliable applications. I also enjoy designing interactive videogames that combine creativity with programming.",
-    bio3: "Beyond coding, I serve as Engineering Faculty Representative at UCC (2025–2027), work as a Chess Instructor, and actively contribute as a University Well-being Monitor. As a professional chess player, I apply strategic thinking and analytical skills to software engineering.",
+    bio3: "Beyond coding, I serve as Engineering Faculty Representative at UCC (2025-2027), work as a Chess Instructor, and actively contribute as a University Well-being Monitor. As a professional chess player, I apply strategic thinking and analytical skills to software engineering.",
     quote: "\"A software engineer in training, committed to continuous learning and with a mindset of constant progress when facing new challenges.\"",
     values: [
       { title: "Clean Code", description: "Writing maintainable, scalable code that stands the test of time." },
@@ -47,7 +47,7 @@ export const en: Translations = {
     items: [
       {
         title: "Vector Field Simulator",
-        subtitle: "Degree Project — Unity 3D",
+        subtitle: "Degree Project - Unity 3D",
         description: "An interactive 3D vector field application built in Unity, designed as a degree project to visualize and explore mathematical vector fields in real-time. Supports dynamic field generation, camera controls, and educational overlays.",
       },
       {
@@ -75,16 +75,16 @@ export const en: Translations = {
     viewCert: "View certificate",
     items: [
       {
-        period: "2024 — Present",
+        period: "2024 - Present",
         title: "Software Engineering Student",
-        company: "Universidad Cooperativa de Colombia — Full Stack",
+        company: "Universidad Cooperativa de Colombia - Full Stack",
         description: "Full-stack development with React, TypeScript, SpringBoot, and MongoDB. Building cross-platform solutions with multidisciplinary teams.",
         tags: ["React", "TypeScript", "SpringBoot", "MongoDB"],
       },
       {
-        period: "2025 — 2027",
+        period: "2025 - 2027",
         title: "Engineering Faculty Representative",
-        company: "UCC — Student Government + Tutoring",
+        company: "UCC - Student Government + Tutoring",
         description: "Elected student representative for the Engineering Faculty. Managing university well-being initiatives and academic tutoring programs.",
         tags: ["Leadership", "Communication", "Management"],
       },
@@ -107,7 +107,7 @@ export const en: Translations = {
       { title: "English B1", institution: "Servicio Nacional de Aprendizaje · Levels 1–13", period: "2023 – 2024", description: "Completed 13 levels of English at SENA, reaching B1 proficiency in reading, writing, listening, and speaking.", url: "https://campusuccedu-my.sharepoint.com/:f:/r/personal/valentina_burbanos_campusucc_edu_co/Documents/Certificados/English?csf=1&web=1&e=YW9ZLE" },
       { title: "Software Engineering Seminar", institution: "Universidad Cooperativa de Colombia", period: "2024 – 2026", description: "Participated in academic seminars covering advanced topics in software engineering, architecture, and emerging technologies.", url: "https://campusuccedu-my.sharepoint.com/:f:/r/personal/valentina_burbanos_campusucc_edu_co/Documents/Certificados/Seminar?csf=1&web=1&e=Ud6CDi" },
       { title: "ASCUN XXXII National University Games", institution: "Official chess participant — ASCUN DAF Bucaramanga 2025", period: "2025", description: "Competed as official chess representative for UCC at the national ASCUN DAF university games held in Bucaramanga.", url: "https://campusuccedu-my.sharepoint.com/:f:/r/personal/valentina_burbanos_campusucc_edu_co/Documents/Certificados/Chess?csf=1&web=1&e=Dn5SEo" },
-      { title: "University Academic Tutoring", institution: "Faculty of Software Engineering · UCC", period: "2025", description: "Served as academic monitor for the Faculty of Software Engineering, supporting fellow students in their coursework.", url: "https://campusuccedu-my.sharepoint.com/:f:/r/personal/valentina_burbanos_campusucc_edu_co/Documents/Certificados/Chess%20tutor?csf=1&web=1&e=mYmZNL" },
+      { title: "University Wellbeing Monitor & Basic Chess Instructor", institution: "Faculty of Software Engineering · UCC", period: "2025", description: "Served as University Wellbeing Monitor, supporting student well-being initiatives. Also worked as a Basic Chess Instructor, teaching fundamental chess strategies and techniques.", url: "https://campusuccedu-my.sharepoint.com/:f:/r/personal/valentina_burbanos_campusucc_edu_co/Documents/Certificados/Chess%20tutor?csf=1&web=1&e=mYmZNL" },
       { title: "Other Courses", institution: "Cybersecurity · UCC · Practical Journalism · Libre Aprendizaje", period: "2025", description: "Completed short courses in cybersecurity fundamentals and practical journalism, broadening technical and communication skills.", url: "https://campusuccedu-my.sharepoint.com/:f:/r/personal/valentina_burbanos_campusucc_edu_co/Documents/Certificados/Courses?csf=1&web=1&e=Ex8wUz" },
       { title: "Coming Soon", institution: "Research Article", period: "2026", description: "An upcoming research article currently in development. Details will be shared upon publication." },
     ],
@@ -131,9 +131,9 @@ export const en: Translations = {
       },
       {
         quote: "Working with Valentina is enriching. Her attention to detail and ability to translate complex requirements into elegant solutions is truly remarkable.",
-        name: "Juan Manuel Imachi",
+        name: "Juan Manuel",
         role: "Software Developer",
-        initials: "JI",
+        initials: "JM",
       },
     ],
   },

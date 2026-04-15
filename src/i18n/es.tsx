@@ -14,7 +14,7 @@ export const es: Translations = {
     heading2: "experiencias",
     heading3: "digitales con",
     heading4: "precisión.",
-    description: "— estudiante de Ingeniería de Software Full Stack en la UCC, apasionada por construir aplicaciones web modernas, escalables y eficientes con gran atención al detalle y la experiencia del usuario.",
+    description: "Hola, soy Valentina Burbano, estudiante de Ingeniería de Software Full Stack en la UCC. Soy apasionada por crear aplicaciones escalables y de alto rendimiento con interfaces dinámicas en JavaScript y sistemas robustos en C#/Java. También diseño videojuegos interactivos y me enfoco en crear soluciones innovadoras y centradas en el usuario con gran atención al detalle.",
     name: "Valentina Burbano",
     contactMe: "Contáctame",
     downloadCV: "Descargar CV",
@@ -27,9 +27,9 @@ export const es: Translations = {
     label: "Sobre Mí",
     title1: "Construyendo el futuro, ",
     titleHighlight: "un componente a la vez.",
-    bio1: "Soy una apasionada estudiante de Ingeniería de Software con enfoque en desarrollo full-stack web y móvil. Mi camino comenzó con curiosidad por cómo funcionan las cosas en la web, y ha evolucionado hacia un compromiso profundo con las tecnologías modernas de frontend y backend.",
-    bio2: "Me especializo en React, TypeScript, SpringBoot y MongoDB — construyendo desde plataformas de aprendizaje interactivas hasta visualizadores matemáticos 3D. Mi enfoque combina excelencia técnica con un buen ojo para el diseño y la experiencia del usuario.",
-    bio3: "Más allá del código, soy Representante de la Facultad de Ingeniería en la UCC (2025–2027), compito en ajedrez en torneos universitarios nacionales (ASCUN 2025) y soy monitora académica de mis compañeros.",
+    bio1: "Me especializo en desarrollo full-stack para aplicaciones web y móviles. Tengo una fuerte pasión por JavaScript y creo interfaces dinámicas y responsivas usando React, Next.js, TypeScript y Angular. En backend, desarrollo sistemas escalables con C#, Java, Spring Boot, Node.js y Django, trabajando con PostgreSQL y MongoDB.",
+    bio2: "Combino excelencia técnica con innovación para entregar soluciones intuitivas y de alto rendimiento. Aprovecho herramientas modernas como Docker, AWS, Azure, Vercel y GitHub Actions para construir y desplegar aplicaciones confiables. También disfruto diseñando videojuegos interactivos que combinan creatividad con programación.",
+    bio3: "Más allá del código, soy Representante de la Facultad de Ingeniería en la UCC (2025 - 2027), trabajo como Instructora de Ajedrez y contribuyo activamente como Monitora de Bienestar Universitario. Como ajedrecista profesional, aplico pensamiento estratégico y habilidades analíticas a la ingeniería de software.",
     quote: "\"Una ingeniera de software en formación, comprometida con el aprendizaje continuo y con una mentalidad de progreso constante al enfrentar nuevos desafíos.\"",
     values: [
       { title: "Código Limpio", description: "Escribiendo código mantenible y escalable que resiste la prueba del tiempo." },
@@ -47,7 +47,7 @@ export const es: Translations = {
     items: [
       {
         title: "Simulador de Campos Vectoriales",
-        subtitle: "Trabajo de Grado — Unity 3D",
+        subtitle: "Trabajo de Grado - Unity 3D",
         description: "Una aplicación 3D interactiva de campos vectoriales construida en Unity, diseñada como trabajo de grado para visualizar y explorar campos vectoriales matemáticos en tiempo real. Soporta generación dinámica de campos, controles de cámara y superposiciones educativas.",
       },
       {
@@ -75,16 +75,16 @@ export const es: Translations = {
     viewCert: "Ver certificado",
     items: [
       {
-        period: "2024 — Presente",
+        period: "2024 - Presente",
         title: "Estudiante de Ingeniería de Software",
-        company: "Universidad Cooperativa de Colombia — Full Stack",
+        company: "Universidad Cooperativa de Colombia - Full Stack",
         description: "Desarrollo full-stack con React, TypeScript, SpringBoot y MongoDB. Construyendo soluciones multiplataforma con equipos multidisciplinarios.",
         tags: ["React", "TypeScript", "SpringBoot", "MongoDB"],
       },
       {
-        period: "2025 — 2027",
+        period: "2025 - 2027",
         title: "Representante de Facultad de Ingeniería",
-        company: "UCC — Gobierno Estudiantil + Tutorías",
+        company: "UCC - Gobierno Estudiantil + Tutorías",
         description: "Representante estudiantil electa de la Facultad de Ingeniería. Gestionando iniciativas de bienestar universitario y programas de tutorías académicas.",
         tags: ["Liderazgo", "Comunicación", "Gestión"],
       },
@@ -107,7 +107,7 @@ export const es: Translations = {
       { title: "Inglés B1", institution: "Servicio Nacional de Aprendizaje · Niveles 1–13", period: "2023 – 2024", description: "Completé 13 niveles de inglés en el SENA, alcanzando el nivel B1 en lectura, escritura, escucha y expresión oral.", url: "https://campusuccedu-my.sharepoint.com/:f:/r/personal/valentina_burbanos_campusucc_edu_co/Documents/Certificados/English?csf=1&web=1&e=YW9ZLE" },
       { title: "Seminario de Ingeniería de Software", institution: "Universidad Cooperativa de Colombia", period: "2024 – 2026", description: "Participé en seminarios académicos sobre temas avanzados de ingeniería de software, arquitectura y tecnologías emergentes.", url: "https://campusuccedu-my.sharepoint.com/:f:/r/personal/valentina_burbanos_campusucc_edu_co/Documents/Certificados/Seminar?csf=1&web=1&e=Ud6CDi" },
       { title: "Juegos Universitarios Nacionales ASCUN XXXII", institution: "Participante oficial de ajedrez — ASCUN DAF Bucaramanga 2025", period: "2025", description: "Competí como representante oficial de ajedrez de la UCC en los juegos universitarios nacionales ASCUN DAF en Bucaramanga.", url: "https://campusuccedu-my.sharepoint.com/:f:/r/personal/valentina_burbanos_campusucc_edu_co/Documents/Certificados/Chess?csf=1&web=1&e=Dn5SEo" },
-      { title: "Tutoría Académica Universitaria", institution: "Facultad de Ingeniería de Software · UCC", period: "2025", description: "Fui monitora académica de la Facultad de Ingeniería de Software, apoyando a compañeros en sus materias universitarias.", url: "https://campusuccedu-my.sharepoint.com/:f:/r/personal/valentina_burbanos_campusucc_edu_co/Documents/Certificados/Chess%20tutor?csf=1&web=1&e=mYmZNL" },
+      { title: "Monitora de Bienestar Universitario & Profesora de Ajedrez Básico", institution: "Facultad de Ingeniería de Software - UCC", period: "2025", description: "Fui Monitora de Bienestar Universitario, apoyando iniciativas de bienestar estudiantil. También trabajé como Profesora de Ajedrez Básico, enseñando estrategias y técnicas fundamentales de ajedrez.", url: "https://campusuccedu-my.sharepoint.com/:f:/r/personal/valentina_burbanos_campusucc_edu_co/Documents/Certificados/Chess%20tutor?csf=1&web=1&e=mYmZNL" },
       { title: "Otros Cursos", institution: "Ciberseguridad · UCC · Periodismo Práctico · Libre Aprendizaje", period: "2025", description: "Realicé cursos cortos en fundamentos de ciberseguridad y periodismo práctico, ampliando habilidades técnicas y de comunicación.", url: "https://campusuccedu-my.sharepoint.com/:f:/r/personal/valentina_burbanos_campusucc_edu_co/Documents/Certificados/Courses?csf=1&web=1&e=Ex8wUz" },
       { title: "Próximamente", institution: "Artículo de Investigación", period: "2026", description: "Un artículo de investigación actualmente en desarrollo. Los detalles se compartirán al momento de su publicación." },
     ],
@@ -131,9 +131,9 @@ export const es: Translations = {
       },
       {
         quote: "Trabajar con Valentina es enriquecedor. Su atención al detalle y su capacidad para traducir requisitos complejos en soluciones elegantes es verdaderamente notable.",
-        name: "Juan Manuel Imachi",
+        name: "Juan Manuel",
         role: "Desarrollador de Software",
-        initials: "JI",
+        initials: "JM",
       },
     ],
   },

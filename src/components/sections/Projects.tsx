@@ -1,5 +1,6 @@
 import { ExternalLink, Github } from "lucide-react";
 import { useLang } from "@/i18n";
+import { memo } from "react";
 
 interface ProjectMeta {
   tags: string[];
@@ -12,43 +13,43 @@ interface ProjectMeta {
 const projectsMeta: ProjectMeta[] = [
   {
     tags: ["C#", "Unity 3D", "Mathematics", "3D Graphics"],
-    image: "/projects/TrabajoDeGrado.webp",
+    image: "/images/projects/TrabajoDeGrado.webp",
     github: "https://github.com/BurbanoValentina/AplicacionVectores.git",
     live: null,
   },
   {
     tags: ["TypeScript", "CSS", "Java", "Vercel"],
-    image: "/projects/VideojuegoMatematico.webp",
+    image: "/images/projects/VideojuegoMatematico.webp",
     github: "https://github.com/BurbanoValentina/FrotendProjectGame.git",
     githubBackend: "https://github.com/BurbanoValentina/BackendProjectGame.git",
     live: "https://frotendproject.vercel.app/",
   },
   {
     tags: ["TypeScript", "CSS", "Three.js", "Vercel"],
-    image: "/projects/CalculadoraSuperficial3D.webp",
+    image: "/images/projects/CalculadoraSuperficial3D.webp",
     github: "https://github.com/BurbanoValentina/ProyectoGrafico3D.git",
     live: "https://proyecto-grafico3-d.vercel.app/",
   },
 ];
 
-export const Projects = (): React.JSX.Element => {
+export const Projects = memo((): React.JSX.Element => {
   const { t } = useLang();
 
   return (
     <section id="projects" className="py-16 relative">
       <div className="container mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-16 animate-fade-in">
+        <div className="text-center mb-12 md:mb-16 animate-fade-in">
           <span className="text-sm text-primary tracking-widest uppercase">
             {t.projects.label}
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-3">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-3">
             {t.projects.title1}
             <span className="italic font-normal font-serif text-primary">
               {t.projects.titleHighlight}
             </span>
           </h2>
-          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto text-lg">
+          <p className="text-sm md:text-base text-muted-foreground mt-4 max-w-2xl mx-auto">
             {t.projects.subtitle}
           </p>
         </div>
@@ -63,7 +64,7 @@ export const Projects = (): React.JSX.Element => {
                 className="glass rounded-3xl overflow-hidden group hover:glow-border transition-all duration-500 animate-fade-in"
                 style={{ animationDelay: `${idx * 150}ms` }}
               >
-                <div className={`grid lg:grid-cols-2 gap-0 ${idx % 2 !== 0 ? "lg:direction-rtl" : ""}`}>
+                <div className={`grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-0 ${idx % 2 !== 0 ? "lg:flex-row-reverse" : ""}`}>
                   {/* Image */}
                   <div className={`relative overflow-hidden ${idx % 2 !== 0 ? "lg:order-2" : ""}`}>
                     <img
@@ -77,14 +78,14 @@ export const Projects = (): React.JSX.Element => {
                   </div>
 
                   {/* Content */}
-                  <div className={`p-6 lg:p-10 flex flex-col justify-center ${idx % 2 !== 0 ? "lg:order-1" : ""}`}>
+                  <div className={`p-6 md:p-8 lg:p-10 flex flex-col justify-center ${idx % 2 !== 0 ? "lg:order-1" : ""}`}>
                     <span className="text-primary text-sm font-medium tracking-wide uppercase mb-2">
                       {project.subtitle}
                     </span>
-                    <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                    <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4">
                       {project.title}
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed mb-6">
+                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-6">
                       {project.description}
                     </p>
 
@@ -131,4 +132,5 @@ export const Projects = (): React.JSX.Element => {
       </div>
     </section>
   );
-};
+});
+Projects.displayName = "Projects";

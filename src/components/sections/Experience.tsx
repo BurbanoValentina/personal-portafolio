@@ -1,6 +1,7 @@
 import { useLang } from "@/i18n";
+import { memo } from "react";
 
-export const Experience = (): React.JSX.Element => {
+export const Experience = memo((): React.JSX.Element => {
   const { t } = useLang();
 
   return (
@@ -8,17 +9,17 @@ export const Experience = (): React.JSX.Element => {
       <div className="container mx-auto px-6">
 
         {/* ── Experience Header ── */}
-        <div className="text-center mb-16 animate-fade-in">
+        <div className="text-center mb-12 md:mb-16 animate-fade-in">
           <span className="text-sm text-primary tracking-widest uppercase">
             {t.experience.label}
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-3">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-3">
             {t.experience.title1}
             <span className="italic font-normal font-serif text-primary">
               {t.experience.titleHighlight}
             </span>
           </h2>
-          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto text-lg">
+          <p className="text-sm md:text-base text-muted-foreground mt-4 max-w-2xl mx-auto">
             {t.experience.subtitle}
           </p>
         </div>
@@ -80,17 +81,17 @@ export const Experience = (): React.JSX.Element => {
         </div>
 
         {/* ── Certifications Header ── */}
-        <div className="text-center mb-16 animate-fade-in">
+        <div className="text-center mb-12 md:mb-16 animate-fade-in">
           <span className="text-sm text-primary tracking-widest uppercase">
             {t.experience.certLabel}
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-3">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-3">
             {t.experience.certTitle1}
             <span className="italic font-normal font-serif text-primary">
               {t.experience.certTitleHighlight}
             </span>
           </h2>
-          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto text-lg">
+          <p className="text-sm md:text-base text-muted-foreground mt-4 max-w-2xl mx-auto">
             {t.experience.certSubtitle}
           </p>
         </div>
@@ -155,4 +156,5 @@ export const Experience = (): React.JSX.Element => {
       </div>
     </section>
   );
-};
+});
+Experience.displayName = "Experience";

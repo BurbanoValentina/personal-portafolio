@@ -2,6 +2,7 @@ import { AnimatedBorderButton, Button } from "@/components/common";
 import { ArrowRight, Github, Linkedin } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { useLang } from "@/i18n";
+import { useMemo, memo } from "react";
 
 interface Dot {
   left: number;
@@ -27,11 +28,14 @@ const socialLinks: SocialLink[] = [
   { icon: Linkedin, href: "https://www.linkedin.com/in/valentina-burbano-salazar-2473a2327/" },
 ];
 
-const generateSpacedDots = (): Dot[] => {
+// Generar dots solo una vez (costante)
+const generateSpacedDots = (count: number = 15): Dot[] => {
   const dots: Dot[] = [];
-  const minDistance = 15; // Distancia mínima entre puntos en porcentaje
+  const minDistance = 15;
+  let attempts = 0;
+  const maxAttempts = 300;
   
-  while (dots.length < 20) {
+  while (dots.length < count && attempts < maxAttempts) {
     const newDot = {
       left: Math.random() * 100,
       top: Math.random() * 100,
@@ -39,7 +43,6 @@ const generateSpacedDots = (): Dot[] => {
       duration: 15 + Math.random() * 10,
     };
     
-    // Verificar distancia con puntos existentes
     const isFarEnough = dots.every(dot => {
       const distance = Math.sqrt(
         Math.pow(newDot.left - dot.left, 2) + Math.pow(newDot.top - dot.top, 2)
@@ -50,22 +53,24 @@ const generateSpacedDots = (): Dot[] => {
     if (isFarEnough) {
       dots.push(newDot);
     }
+    attempts++;
   }
   
   return dots;
 };
 
-const animatedDots: Dot[] = generateSpacedDots();
-
-export const Hero = (): React.JSX.Element => {
+export const Hero = memo((): React.JSX.Element => {
   const { t } = useLang();
+  
+  // Memoizar los dots - reducidos a 15 para mejor rendimiento
+  const animatedDots = useMemo(() => generateSpacedDots(15), []);
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
-        <img src="/hero-bg.webp" alt="Hero background" fetchPriority="high" decoding="async" className="w-full h-full object-cover opacity-40" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/80 to-background" />
+        <img src="/images/hero-bg.webp" alt="Hero background" fetchPriority="high" decoding="async" className="w-full h-full object-cover opacity-40" />
+        <div className="absolute inset-0 bg-linear-to-b from-background/20 via-background/80 to-background" />
       </div>
 
       {/* Static green dots */}
@@ -85,7 +90,7 @@ export const Hero = (): React.JSX.Element => {
 
       {/* Content */}
       <div className="container mx-auto px-6 pt-20 lg:pt-32 pb-20 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 lg:gap-12 items-center">
           {/* Left Column — text: below image on mobile, left on desktop */}
           <div className="space-y-8 order-2 lg:order-1">
             <div className="animate-fade-in">
@@ -96,7 +101,7 @@ export const Hero = (): React.JSX.Element => {
             </div>
 
             <div className="space-y-4">
-              <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold leading-tight animate-fade-in animate-delay-100">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold leading-tight animate-fade-in animate-delay-100">
                 {t.hero.heading1}
                 <span className="text-primary glow-text font-extrabold">{t.hero.heading2}</span>
                 <br />
@@ -105,12 +110,12 @@ export const Hero = (): React.JSX.Element => {
                 <span className="italic font-normal font-serif text-foreground">{t.hero.heading4}</span>
               </h1>
 
-              <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animate-delay-200">
-                Hi, I'm <span className="text-foreground font-medium">{t.hero.name}</span> {t.hero.description}
+              <p className="text-base md:text-lg text-muted-foreground max-w-lg animate-fade-in animate-delay-200">
+                {t.hero.description}
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-4 animate-fade-in animate-delay-300">
+            <div className="flex flex-wrap gap-3 md:gap-4 animate-fade-in animate-delay-300">
               <a href="#footer">
                 <Button size="lg">
                   {t.hero.contactMe} <ArrowRight className="w-5 h-5 ml-2" />
@@ -135,15 +140,15 @@ export const Hero = (): React.JSX.Element => {
             <div className="relative max-w-md mx-auto">
               <div className="absolute inset-0 rounded-3xl bg-linear-to-br from-primary/30 via-transparent to-primary/10 blur-2xl animate-pulse" />
               <div className="relative glass rounded-3xl p-2 glow-border">
-                <img src="/Profile-Photo.webp" alt="Valentina Burbano" fetchPriority="high" decoding="async" className="w-full aspect-4/5 object-cover rounded-2xl" />
-                <div className="absolute -bottom-4 right-4 glass rounded-xl px-4 py-3 animate-float">
-                  <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-                    <span className="text-sm font-medium">{t.hero.available}</span>
+                <img src="/images/profile-photo.webp" alt="Valentina Burbano" fetchPriority="high" decoding="async" className="w-full aspect-4/5 object-cover rounded-2xl" />
+                <div className="absolute bottom-2 right-2 md:-bottom-4 md:right-4 glass rounded-xl px-3 py-2 md:px-4 md:py-3 animate-float text-xs md:text-sm">
+                  <div className="flex items-center gap-2 md:gap-3">
+                    <div className="w-2 h-2 md:w-3 md:h-3 bg-green-500 rounded-full animate-pulse" />
+                    <span className="font-medium">{t.hero.available}</span>
                   </div>
                 </div>
-                <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animate-delay-500">
-                  <div className="text-2xl font-bold text-primary">1+</div>
+                <div className="absolute top-2 -left-2 md:-top-4 md:-left-4 glass rounded-xl px-3 py-2 md:px-4 md:py-3 animate-float animate-delay-500 text-xs md:text-sm">
+                  <div className="text-xl md:text-2xl font-bold text-primary">1+</div>
                   <div className="text-xs text-muted-foreground">{t.hero.yearsExp}</div>
                 </div>
               </div>
@@ -172,4 +177,5 @@ export const Hero = (): React.JSX.Element => {
       </div>
     </section>
   );
-};
+});
+Hero.displayName = "Hero";

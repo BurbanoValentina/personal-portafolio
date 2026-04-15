@@ -1,12 +1,13 @@
 import { Menu, X } from "lucide-react";
-import { useState, useEffect } from "react";
-import { useTheme } from "@/contexts/ThemeContext";
+import { useState, useEffect, memo, useRef } from "react";
+import { useTheme } from "@/hooks/useTheme";
 import { useLang } from "@/i18n";
 import "flag-icons/css/flag-icons.min.css";
 
-export const Navbar = (): React.JSX.Element => {
+export const Navbar = memo((): React.JSX.Element => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState<boolean>(false);
+  const headerRef = useRef<HTMLElement>(null);
   const { theme, toggleTheme } = useTheme();
   const { lang, toggleLang, t } = useLang();
 
@@ -19,18 +20,33 @@ export const Navbar = (): React.JSX.Element => {
   ];
 
   useEffect(() => {
-    const handleScroll = (): void => setScrolled(window.scrollY > 50);
+    let animationFrameId: number;
+    
+    const handleScroll = (): void => {
+      animationFrameId = requestAnimationFrame(() => {
+        const currentScrollY = window.scrollY;
+        if (headerRef.current) {
+          headerRef.current.style.transform = `translateY(${currentScrollY}px)`;
+        }
+        setScrolled(currentScrollY > 50);
+      });
+    };
+    
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      cancelAnimationFrame(animationFrameId);
+    };
   }, []);
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 py-4 z-50 transition-all duration-500 ${
+      ref={headerRef}
+      className={`fixed top-0 left-0 right-0 py-3 md:py-4 z-50 transition-none ${
         scrolled ? "glass-strong shadow-lg" : "bg-transparent"
       }`}
     >
-      <nav className="container mx-auto px-6 flex items-center justify-between">
+      <nav className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         {/* Logo */}
         <a
           href="#"
@@ -124,4 +140,5 @@ export const Navbar = (): React.JSX.Element => {
       )}
     </header>
   );
-};
+});
+Navbar.displayName = "Navbar";

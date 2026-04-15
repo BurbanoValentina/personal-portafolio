@@ -1,13 +1,5 @@
-import { createContext, useContext, useState, useEffect, type ReactNode } from "react";
-
-type Theme = "dark" | "light";
-
-interface ThemeContextType {
-  theme: Theme;
-  toggleTheme: () => void;
-}
-
-export const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+import { useState, useEffect, type ReactNode } from "react";
+import { ThemeContext, type Theme } from "./theme";
 
 export const ThemeProvider = ({ children }: { children: ReactNode }): React.JSX.Element => {
   const [theme, setTheme] = useState<Theme>("dark");
@@ -27,8 +19,3 @@ export const ThemeProvider = ({ children }: { children: ReactNode }): React.JSX.
   );
 };
 
-export const useTheme = (): ThemeContextType => {
-  const context = useContext(ThemeContext);
-  if (!context) throw new Error("useTheme must be used within ThemeProvider");
-  return context;
-};
