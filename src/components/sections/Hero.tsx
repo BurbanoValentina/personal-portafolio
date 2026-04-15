@@ -3,6 +3,7 @@ import { ArrowRight, Github, Linkedin } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { useLang } from "@/i18n";
 import { useMemo, memo } from "react";
+import { useTheme } from "@/hooks/useTheme";
 
 interface Dot {
   left: number;
@@ -61,6 +62,8 @@ const generateSpacedDots = (count: number = 15): Dot[] => {
 
 export const Hero = memo((): React.JSX.Element => {
   const { t } = useLang();
+  const { theme } = useTheme();
+  const profilePhoto = theme === "light" ? "/images/Profile-Photo2.png" : "/images/profile-photo.webp";
   
   // Memoizar los dots - reducidos a 15 para mejor rendimiento
   const animatedDots = useMemo(() => generateSpacedDots(15), []);
@@ -140,7 +143,7 @@ export const Hero = memo((): React.JSX.Element => {
             <div className="relative max-w-md mx-auto">
               <div className="absolute inset-0 rounded-3xl bg-linear-to-br from-primary/30 via-transparent to-primary/10 blur-2xl animate-pulse" />
               <div className="relative glass rounded-3xl p-2 glow-border">
-                <img src="/images/profile-photo.webp" alt="Valentina Burbano" fetchPriority="high" decoding="async" className="w-full aspect-4/5 object-cover rounded-2xl" />
+                <img src={profilePhoto} alt="Valentina Burbano" fetchPriority="high" decoding="async" className="w-full aspect-4/5 object-cover rounded-2xl" />
                 <div className="absolute bottom-2 right-2 md:-bottom-4 md:right-4 glass rounded-xl px-3 py-2 md:px-4 md:py-3 animate-float text-xs md:text-sm">
                   <div className="flex items-center gap-2 md:gap-3">
                     <div className="w-2 h-2 md:w-3 md:h-3 bg-green-500 rounded-full animate-pulse" />
