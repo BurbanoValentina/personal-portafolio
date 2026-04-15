@@ -1,8 +1,9 @@
 import { useMemo } from "react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 import { Button } from "@/components/Button";
-import { ArrowRight, Github, Linkedin, Facebook } from "lucide-react";
+import { ArrowRight, Github, Linkedin } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import { useLang } from "@/contexts/LanguageContext";
 
 interface Dot {
   left: number;
@@ -18,19 +19,19 @@ interface SocialLink {
 
 const skills: string[] = [
   "React", "Next.js", "Java", "SpringBoot", "Angular", "Python",
-  "Django", "Arduino", "C#", "HTML", "Flutter", "TypeScript",
-  "Node.js", "PostgreSQL", "MongoDB", "Redis", "Docker", "AWS",
-  "Vercel", "Tailwind CSS", "Prisma", "Jest", "Cypress", "Figma",
-  "Git", "GitHub Actions",
+  "Django", "JavaScript", "Arduino", "C#", "HTML", "Flutter", "TypeScript",
+  "Node.js", "PostgreSQL", "MongoDB", "Docker", "AWS",
+  "Vercel", "Tailwind CSS", "Figma", "Git", "GitHub Actions", "Azure"
 ];
 
 const socialLinks: SocialLink[] = [
   { icon: Github, href: "https://github.com/BurbanoValentina" },
   { icon: Linkedin, href: "https://www.linkedin.com/in/valentina-burbano-salazar-2473a2327/" },
-  { icon: Facebook, href: "https://www.facebook.com/profile.php?id=100004770467639&locale=es_LA" },
 ];
 
 export const Hero = (): React.JSX.Element => {
+  const { t } = useLang();
+
   const dots: Dot[] = useMemo(() => {
     return [...Array(30)].map(() => ({
       left: Math.random() * 100,
@@ -44,7 +45,7 @@ export const Hero = (): React.JSX.Element => {
     <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
-        <img src="/hero-bg.jpg" alt="Hero background" className="w-full h-full object-cover opacity-40" />
+        <img src="/hero-bg.webp" alt="Hero background" fetchPriority="high" decoding="async" className="w-full h-full object-cover opacity-40" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/80 to-background" />
       </div>
 
@@ -64,43 +65,43 @@ export const Hero = (): React.JSX.Element => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column */}
-          <div className="space-y-8">
+      <div className="container mx-auto px-6 pt-20 lg:pt-32 pb-20 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Column — text: below image on mobile, left on desktop */}
+          <div className="space-y-8 order-2 lg:order-1">
             <div className="animate-fade-in">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                Software Engineer · Full Stack
+                {t.hero.badge}
               </span>
             </div>
 
             <div className="space-y-4">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animate-delay-100">
-                Crafting{" "}
-                <span className="text-primary glow-text font-extrabold">digital</span>
+              <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold leading-tight animate-fade-in animate-delay-100">
+                {t.hero.heading1}
+                <span className="text-primary glow-text font-extrabold">{t.hero.heading2}</span>
                 <br />
-                experiences with
+                {t.hero.heading3}
                 <br />
-                <span className="italic font-normal font-serif text-white">precision.</span>
+                <span className="italic font-normal font-serif text-foreground">{t.hero.heading4}</span>
               </h1>
 
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animate-delay-200">
-                Hi, I'm <span className="text-foreground font-medium">Valentina Burbano</span> — a Full Stack Software Engineering student at UCC, passionate about building modern, scalable, and efficient web applications with strong attention to detail and user experience.
+                Hi, I'm <span className="text-foreground font-medium">{t.hero.name}</span> {t.hero.description}
               </p>
             </div>
 
             <div className="flex flex-wrap gap-4 animate-fade-in animate-delay-300">
-              <a href="#contact">
+              <a href="#footer">
                 <Button size="lg">
-                  Contact Me <ArrowRight className="w-5 h-5 ml-2" />
+                  {t.hero.contactMe} <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </a>
               <AnimatedBorderButton />
             </div>
 
             <div className="flex items-center gap-4 animate-fade-in animate-delay-400">
-              <span className="text-sm text-muted-foreground">Follow me:</span>
+              <span className="text-sm text-muted-foreground">{t.hero.followMe}</span>
               {socialLinks.map((social, idx) => (
                 <a key={idx} href={social.href} target="_blank" rel="noopener noreferrer"
                   className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300">
@@ -110,21 +111,21 @@ export const Hero = (): React.JSX.Element => {
             </div>
           </div>
 
-          {/* Right Column */}
-          <div className="relative animate-fade-in animate-delay-300">
+          {/* Right Column — image: first on mobile, right on desktop */}
+          <div className="relative animate-fade-in animate-delay-300 order-1 lg:order-2">
             <div className="relative max-w-md mx-auto">
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/30 via-transparent to-primary/10 blur-2xl animate-pulse" />
               <div className="relative glass rounded-3xl p-2 glow-border">
-                <img src="/Profile-Photo.png" alt="Valentina Burbano" className="w-full aspect-[4/5] object-cover rounded-2xl" />
+                <img src="/Profile-Photo.webp" alt="Valentina Burbano" fetchPriority="high" decoding="async" className="w-full aspect-4/5 object-cover rounded-2xl" />
                 <div className="absolute -bottom-4 right-4 glass rounded-xl px-4 py-3 animate-float">
                   <div className="flex items-center gap-3">
                     <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-                    <span className="text-sm font-medium">Available for work</span>
+                    <span className="text-sm font-medium">{t.hero.available}</span>
                   </div>
                 </div>
                 <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animate-delay-500">
                   <div className="text-2xl font-bold text-primary">1+</div>
-                  <div className="text-xs text-muted-foreground">Years Exp.</div>
+                  <div className="text-xs text-muted-foreground">{t.hero.yearsExp}</div>
                 </div>
               </div>
             </div>
@@ -134,7 +135,7 @@ export const Hero = (): React.JSX.Element => {
         {/* Skills Marquee */}
         <div className="mt-20 animate-fade-in animate-delay-600">
           <p className="text-center text-sm text-muted-foreground tracking-widest uppercase mb-8">
-            Technologies I work with
+            {t.hero.techTitle}
           </p>
           <div className="relative overflow-hidden">
             <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-background to-transparent z-10" />
