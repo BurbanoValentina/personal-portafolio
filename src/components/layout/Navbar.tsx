@@ -1,5 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useState, useEffect, memo, useRef } from "react";
+import { createPortal } from "react-dom";
 import { useTheme } from "@/hooks/useTheme";
 import { useLang } from "@/i18n";
 import "flag-icons/css/flag-icons.min.css";
@@ -21,8 +22,9 @@ export const Navbar = memo((): React.JSX.Element => {
 
   useEffect(() => {
     let animationFrameId: number;
-    
+
     const handleScroll = (): void => {
+      setIsMobileMenuOpen(false);
       animationFrameId = requestAnimationFrame(() => {
         const currentScrollY = window.scrollY;
         if (headerRef.current) {
@@ -31,8 +33,8 @@ export const Navbar = memo((): React.JSX.Element => {
         setScrolled(currentScrollY > 50);
       });
     };
-    
-    window.addEventListener("scroll", handleScroll);
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => {
       window.removeEventListener("scroll", handleScroll);
       cancelAnimationFrame(animationFrameId);
@@ -89,7 +91,7 @@ export const Navbar = memo((): React.JSX.Element => {
             className="w-9 h-9 rounded-full glass hover:bg-primary/10 transition-all duration-300 flex items-center justify-center overflow-hidden"
             title={lang === "en" ? "Cambiar a Español" : "Switch to English"}
           >
-            <span className={`fi ${lang === "en" ? "fi-us" : "fi-es"} text-lg`} />
+            <span className={`fi fis ${lang === "en" ? "fi-us" : "fi-es"} rounded-full`} style={{ width: "1.5rem", height: "1.5rem" }} />
           </button>
         </div>
 
@@ -102,9 +104,18 @@ export const Navbar = memo((): React.JSX.Element => {
         </button>
       </nav>
 
+      {/* Overlay — renderizado en body para evitar el containing block del transform */}
+      {isMobileMenuOpen && createPortal(
+        <div
+          className="fixed inset-0 z-49"
+          onClick={() => setIsMobileMenuOpen(false)}
+        />,
+        document.body
+      )}
+
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden glass-strong animate-fade-in">
+        <div className="md:hidden glass-strong animate-fade-in relative z-50">
           <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
             {navLinks.map((link, index) => (
               <a
@@ -131,7 +142,7 @@ export const Navbar = memo((): React.JSX.Element => {
                 onClick={toggleLang}
                 className="flex items-center gap-2 px-4 py-2 rounded-full glass text-sm"
               >
-                <span className={`fi ${lang === "en" ? "fi-us" : "fi-es"} text-lg`} />
+                <span className={`fi fis ${lang === "en" ? "fi-us" : "fi-es"} rounded-full`} style={{ width: "1.5rem", height: "1.5rem" }} />
                 {lang === "en" ? "Español" : "English"}
               </button>
             </div>
