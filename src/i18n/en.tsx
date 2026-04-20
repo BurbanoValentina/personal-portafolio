@@ -5,6 +5,9 @@ export const en: Translations = {
     about: "About",
     projects: "Projects",
     experience: "Experience",
+    services: "Services",
+    evolution: "Evolution",
+    certifications: "Certifications",
     testimonials: "Testimonials",
     contact: "Contact",
   },
@@ -75,18 +78,18 @@ export const en: Translations = {
     viewCert: "View certificate",
     items: [
       {
-        period: "2024 - Present",
-        title: "Software Engineering Student",
-        company: "Universidad Cooperativa de Colombia - Full Stack",
-        description: "Full-stack development with React, TypeScript, SpringBoot, and MongoDB. Building cross-platform solutions with multidisciplinary teams.",
-        tags: ["React", "TypeScript", "SpringBoot", "MongoDB"],
-      },
-      {
-        period: "2025 - 2027",
+        period: "2025 - Present",
         title: "Engineering Faculty Representative",
         company: "UCC - Student Government + Tutoring",
         description: "Elected student representative for the Engineering Faculty. Managing university well-being initiatives and academic tutoring programs.",
         tags: ["Leadership", "Communication", "Management"],
+      },
+      {
+        period: "2025",
+        title: "Professional Chess Player",
+        company: "ASCUN XXXII University Games - Bucaramanga",
+        description: "Represented UCC at the ASCUN DAF National University Games. Managing a university chess club and competing at national level.",
+        tags: ["Chess", "Strategy", "Competition"],
       },
       {
         period: "2025",
@@ -96,20 +99,20 @@ export const en: Translations = {
         tags: ["Freelance", "Web Development", "UX"],
       },
       {
-        period: "2025",
-        title: "Professional Chess Player",
-        company: "ASCUN XXXII University Games — Bucaramanga",
-        description: "Represented UCC at the ASCUN DAF National University Games. Managing a university chess club and competing at national level.",
-        tags: ["Chess", "Strategy", "Competition"],
+        period: "2024 - Present",
+        title: "Software Engineering Student",
+        company: "Universidad Cooperativa de Colombia - Full Stack",
+        description: "Full-stack development with React, TypeScript, SpringBoot, and MongoDB. Building cross-platform solutions with multidisciplinary teams.",
+        tags: ["React", "TypeScript", "SpringBoot", "MongoDB"],
       },
     ],
     certs: [
-      { title: "English B1", institution: "Servicio Nacional de Aprendizaje · Levels 1–13", period: "2023 – 2024", description: "Completed 13 levels of English at SENA, reaching B1 proficiency in reading, writing, listening, and speaking.", url: "https://campusuccedu-my.sharepoint.com/:f:/r/personal/valentina_burbanos_campusucc_edu_co/Documents/Certificados/English?csf=1&web=1&e=YW9ZLE" },
-      { title: "Software Engineering Seminar", institution: "Universidad Cooperativa de Colombia", period: "2024 – 2026", description: "Participated in academic seminars covering advanced topics in software engineering, architecture, and emerging technologies.", url: "https://campusuccedu-my.sharepoint.com/:f:/r/personal/valentina_burbanos_campusucc_edu_co/Documents/Certificados/Seminar?csf=1&web=1&e=Ud6CDi" },
-      { title: "ASCUN XXXII National University Games", institution: "Official chess participant — ASCUN DAF Bucaramanga 2025", period: "2025", description: "Competed as official chess representative for UCC at the national ASCUN DAF university games held in Bucaramanga.", url: "https://campusuccedu-my.sharepoint.com/:f:/r/personal/valentina_burbanos_campusucc_edu_co/Documents/Certificados/Chess?csf=1&web=1&e=Dn5SEo" },
+      { title: "Coming Soon", institution: "Research Article", period: "2026", description: "An upcoming research article currently in development. Details will be shared upon publication." },
+      { title: "ASCUN XXXII National University Games", institution: "Official chess participant - ASCUN DAF Bucaramanga 2025", period: "2025", description: "Competed as official chess representative for UCC at the national ASCUN DAF university games held in Bucaramanga.", url: "https://campusuccedu-my.sharepoint.com/:f:/r/personal/valentina_burbanos_campusucc_edu_co/Documents/Certificados/Chess?csf=1&web=1&e=Dn5SEo" },
       { title: "University Wellbeing Monitor & Basic Chess Instructor", institution: "Faculty of Software Engineering · UCC", period: "2025", description: "Served as University Wellbeing Monitor, supporting student well-being initiatives. Also worked as a Basic Chess Instructor, teaching fundamental chess strategies and techniques.", url: "https://campusuccedu-my.sharepoint.com/:f:/r/personal/valentina_burbanos_campusucc_edu_co/Documents/Certificados/Chess%20tutor?csf=1&web=1&e=mYmZNL" },
       { title: "Other Courses", institution: "Cybersecurity · UCC · Practical Journalism · Libre Aprendizaje", period: "2025", description: "Completed short courses in cybersecurity fundamentals and practical journalism, broadening technical and communication skills.", url: "https://campusuccedu-my.sharepoint.com/:f:/r/personal/valentina_burbanos_campusucc_edu_co/Documents/Certificados/Courses?csf=1&web=1&e=Ex8wUz" },
-      { title: "Coming Soon", institution: "Research Article", period: "2026", description: "An upcoming research article currently in development. Details will be shared upon publication." },
+      { title: "Software Engineering Seminar", institution: "Universidad Cooperativa de Colombia", period: "2024 - Present", description: "Participated in academic seminars covering advanced topics in software engineering, architecture, and emerging technologies.", url: "https://campusuccedu-my.sharepoint.com/:f:/r/personal/valentina_burbanos_campusucc_edu_co/Documents/Certificados/Seminar?csf=1&web=1&e=Ud6CDi" },
+      { title: "English B1", institution: "Servicio Nacional de Aprendizaje · Levels 1–13", period: "2023 – 2024", description: "Completed 13 levels of English at SENA, reaching B1 proficiency in reading, writing, listening, and speaking.", url: "https://campusuccedu-my.sharepoint.com/:f:/r/personal/valentina_burbanos_campusucc_edu_co/Documents/Certificados/English?csf=1&web=1&e=YW9ZLE" },
     ],
   },
   testimonials: {
@@ -135,6 +138,143 @@ export const en: Translations = {
         role: "Software Developer",
         initials: "JM",
       },
+    ],
+  },
+  services: {
+    label: "Services",
+    title1: "Solutions that ",
+    titleHighlight: "transform ideas.",
+    subtitle: "End-to-end full-stack development, from architecture to deployment. These are the services I offer to power your next project.",
+    items: [
+      {
+        title: "Full Stack Web Development",
+        description: "Complete, high-performance web applications. From dynamic interfaces with React and Next.js to robust APIs with Spring Boot and Node.js, fully integrated, optimized, and ready to scale.",
+        tags: ["React", "Next.js", "TypeScript", "Angular", "Tailwind CSS"],
+      },
+      {
+        title: "Cross-Platform Apps",
+        description: "Native and cross-platform mobile applications that work on iOS and Android from a single codebase. Fluid experiences, native performance, and user-centered design.",
+        tags: ["Flutter", "React Native", "Dart"],
+      },
+      {
+        title: "Backend, APIs & Databases",
+        description: "Solid backend architectures with RESTful APIs, microservices, and relational/NoSQL databases. Systems designed to support growth with security and efficiency.",
+        tags: ["Java", "Spring Boot", "Node.js", "Django", "PostgreSQL", "MongoDB"],
+      },
+      {
+        title: "Games & Interactive Experiences",
+        description: "Educational videogames and interactive 3D experiences combining game mechanics with learning objectives. Gamification applied to education and data visualization.",
+        tags: ["Unity 3D", "C#", "Three.js", "WebGL"],
+      },
+    ],
+    faqLabel: "Frequently asked questions",
+    faqItems: [
+      {
+        question: "Are you available for work?",
+        answer: "Yes, I'm available for freelance projects, internships, and job opportunities. I can work remotely or on-site, adapting to different time zones and work methodologies.",
+      },
+      {
+        question: "What methodologies do you use?",
+        answer: "I work with agile methodologies like Scrum and Kanban. I apply SOLID principles, Clean Code, and design patterns to ensure maintainable, scalable, and high-quality code.",
+      },
+      {
+        question: "Can you integrate into a remote team?",
+        answer: "Absolutely. I have experience with Git, GitHub, and collaborative workflows. My role as student representative has given me strong communication, leadership, and team management skills.",
+      },
+      {
+        question: "Do you have real project experience?",
+        answer: "Yes, I've built full-stack applications deployed to production, including educational videogames, 3D simulators, and interactive calculators. Each project includes frontend, backend, and deployment.",
+      },
+      {
+        question: "What sets you apart from other developers?",
+        answer: "I combine full-stack development with strategic thinking from professional chess. I'm self-taught, competitive, and constantly strive to go beyond basic requirements to deliver exceptional solutions.",
+      },
+      {
+        question: "Do you handle both frontend and backend?",
+        answer: "Yes, I'm a full-stack developer. I build dynamic interfaces with React, TypeScript, and Angular, and robust systems with Java, Spring Boot, Node.js, and Django, integrating SQL and NoSQL databases.",
+      },
+    ],
+    ctaQuestion: "Have another question?",
+    ctaDescription: "Write me, I respond within 24 hours.",
+    ctaButton: "Contact Me",
+  },
+  processAndGrowth: {
+    label: "Methodology & Evolution",
+    title1: "From process to ",
+    titleHighlight: "continuous progress.",
+    subtitle: "A professional approach based on agile methodologies and SOLID principles, combined with a growth mindset that keeps me at the forefront.",
+    steps: [
+      {
+        title: "Requirements",
+        description: "Gathering, analysis, and documentation of user stories.",
+      },
+      {
+        title: "Sprint Planning",
+        description: "Agile planning, backlog grooming, and task estimation.",
+      },
+      {
+        title: "Architecture",
+        description: "Design with SOLID principles, Clean Architecture, and design patterns.",
+      },
+      {
+        title: "Development",
+        description: "Clean Code, TDD, and iterative development in agile sprints.",
+      },
+      {
+        title: "Testing & QA",
+        description: "Unit tests, integration tests, and quality assurance.",
+      },
+      {
+        title: "Deploy",
+        description: "CI/CD, continuous deployment, monitoring, and feedback.",
+      },
+    ],
+    principles: [
+      { title: "Constant communication", description: "Clear updates at every project phase." },
+      { title: "Agile iteration", description: "Short sprints with incremental deliveries." },
+      { title: "Scalable code", description: "Modular architecture with SOLID principles." },
+      { title: "On-time delivery", description: "Realistic deadlines and commitments met." },
+    ],
+    learningLabel: "Currently learning",
+    learningItems: [
+      {
+        title: "Artificial Intelligence",
+        description: "Machine learning, neural networks, and AI models applied to software development.",
+        status: "active",
+        statusLabel: "Learning",
+      },
+      {
+        title: "Cybersecurity",
+        description: "Web application security, pentesting fundamentals, and security best practices.",
+        status: "active",
+        statusLabel: "Learning",
+      },
+      {
+        title: "Professional English",
+        description: "CISCO professional English program for international technical communication.",
+        status: "active",
+        statusLabel: "Learning",
+      },
+      {
+        title: "DevOps & CI/CD",
+        description: "Automated pipelines, containers, and orchestration with Kubernetes.",
+        status: "soon",
+        statusLabel: "Coming soon",
+      },
+    ],
+    goalsLabel: "2026 Goals",
+    goals: [
+      { text: "Publish professional portfolio", detail: "React + TypeScript + Tailwind", done: true },
+      { text: "Compete at ASCUN nationals", detail: "Chess - Bucaramanga 2025", done: true },
+      { text: "Cloud Architecture", detail: "AWS & Azure - Serverless architectures", done: true },
+      { text: "Publish research article", detail: "In development - 2026", done: false },
+      { text: "Professional internship", detail: "Land a professional internship position", done: false },
+    ],
+    visionLabel: "Future vision",
+    visionItems: [
+      { text: "First job as Full Stack Dev", detail: "Remote or on-site" },
+      { text: "Tech Lead", detail: "Lead frontend & backend teams" },
+      { text: "Create a viral videogame", detail: "Indie development with global impact" },
     ],
   },
   footer: {
