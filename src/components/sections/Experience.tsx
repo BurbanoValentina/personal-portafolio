@@ -4,6 +4,28 @@ import { memo } from "react";
 export const Experience = memo((): React.JSX.Element => {
   const { t } = useLang();
 
+  const isOngoing = (period: string): boolean => /presente|present/i.test(period);
+
+  const getStartYear = (period: string): number => {
+    const match = period.match(/\d{4}/);
+    return match ? Number(match[0]) : 0;
+  };
+
+  const sortByPeriod = (a: { period: string }, b: { period: string }): number => {
+    const aOngoing = isOngoing(a.period);
+    const bOngoing = isOngoing(b.period);
+
+    if (aOngoing !== bOngoing) {
+      return bOngoing ? 1 : -1;
+    }
+
+    return getStartYear(b.period) - getStartYear(a.period);
+  };
+
+  const experienceItems = [...t.experience.items].sort(sortByPeriod);
+
+  const certificationItems = [...t.experience.certs].sort(sortByPeriod);
+
   return (
     <section id="experience" className="py-16 relative">
       <div className="container mx-auto px-6">
@@ -26,11 +48,13 @@ export const Experience = memo((): React.JSX.Element => {
 
         {/* ── Experience Timeline ── */}
         <div className="relative mb-16 lg:mb-32">
-          {/* Line: left edge on mobile, center on lg */}
-          <div className="absolute left-2 lg:left-1/2 top-0 bottom-0 w-px lg:-translate-x-1/2 bg-linear-to-b from-primary via-border to-transparent" />
+          {/* Line: left edge on mobile */}
+          <div className="absolute left-2 top-0 bottom-0 w-px bg-linear-to-b from-primary/70 via-primary/35 to-transparent lg:hidden" />
+          {/* Line: center on desktop */}
+          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-0.5 -translate-x-1/2 bg-linear-to-b from-primary/85 via-primary/45 to-transparent" />
 
           <div className="space-y-8">
-            {t.experience.items.map((exp, idx) => {
+            {experienceItems.map((exp, idx) => {
               const isLeft = idx % 2 === 0;
               const card = (
                 <div className="glass rounded-2xl p-6 flex flex-col hover:glow-border transition-all duration-500">
@@ -81,7 +105,7 @@ export const Experience = memo((): React.JSX.Element => {
         </div>
 
         {/* ── Certifications Header ── */}
-        <div className="text-center mb-12 md:mb-16 animate-fade-in">
+        <div id="certifications" className="text-center mb-12 md:mb-16 animate-fade-in scroll-mt-24">
           <span className="text-sm text-primary tracking-widest uppercase">
             {t.experience.certLabel}
           </span>
@@ -98,11 +122,13 @@ export const Experience = memo((): React.JSX.Element => {
 
         {/* ── Certifications Timeline ── */}
         <div className="relative">
-          {/* Line: left edge on mobile, center on lg */}
-          <div className="absolute left-2 lg:left-1/2 top-0 bottom-0 w-px lg:-translate-x-1/2 bg-linear-to-b from-primary via-border to-transparent" />
+          {/* Line: left edge on mobile */}
+          <div className="absolute left-2 top-0 bottom-0 w-px bg-linear-to-b from-primary/70 via-primary/35 to-transparent lg:hidden" />
+          {/* Line: center on desktop */}
+          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-0.5 -translate-x-1/2 bg-linear-to-b from-primary/85 via-primary/45 to-transparent" />
 
           <div className="space-y-8">
-            {t.experience.certs.map((cert, idx) => {
+            {certificationItems.map((cert, idx) => {
               const isLeft = idx % 2 === 0;
               const card = (
                 <div className="glass rounded-2xl p-6 flex flex-col hover:glow-border transition-all duration-500">
