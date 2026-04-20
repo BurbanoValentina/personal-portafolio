@@ -1,8 +1,11 @@
-// Common components
-export * from './common';
-
-// Layout components
-export * from './layout';
-
-// Sections
-export * from './sections';
+export { Navbar, Footer } from './layout';
+export { Button, AnimatedBorderButton } from './common';
+export {
+	Hero,
+	About,
+	Experience,
+	Projects,
+	Testimonials,
+	ServicesAndFAQ,
+	ProcessAndGrowth,
+} from './sections';
