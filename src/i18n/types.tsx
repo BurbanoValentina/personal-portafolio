@@ -5,6 +5,9 @@ export interface Translations {
     about: string;
     projects: string;
     experience: string;
+    services: string;
+    evolution: string;
+    certifications: string;
     testimonials: string;
     contact: string;
   };
@@ -60,6 +63,57 @@ export interface Translations {
     title1: string;
     titleHighlight: string;
     items: { quote: string; name: string; role: string; initials: string }[];
+  };
+  services: {
+    label: string;
+    title1: string;
+    titleHighlight: string;
+    subtitle: string;
+    items: {
+      title: string;
+      description: string;
+      tags: string[];
+    }[];
+    faqLabel: string;
+    faqItems: {
+      question: string;
+      answer: string;
+    }[];
+    ctaQuestion: string;
+    ctaDescription: string;
+    ctaButton: string;
+  };
+  processAndGrowth: {
+    label: string;
+    title1: string;
+    titleHighlight: string;
+    subtitle: string;
+    steps: {
+      title: string;
+      description: string;
+    }[];
+    principles: {
+      title: string;
+      description: string;
+    }[];
+    learningLabel: string;
+    learningItems: {
+      title: string;
+      description: string;
+      status: "active" | "soon" | "planned" | "completed";
+      statusLabel: string;
+    }[];
+    goalsLabel: string;
+    goals: {
+      text: string;
+      detail: string;
+      done: boolean;
+    }[];
+    visionLabel: string;
+    visionItems: {
+      text: string;
+      detail: string;
+    }[];
   };
   footer: {
     rights: string;
