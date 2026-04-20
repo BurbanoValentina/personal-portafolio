@@ -1,7 +1,7 @@
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { Navbar, Footer } from "@/components";
-import { Hero, About, Experience, Projects, Testimonials } from "@/components";
+import { Hero, About, Experience, Projects, Testimonials, ProcessAndGrowth, ServicesAndFAQ } from "@/components";
 
 function App(): React.JSX.Element {
   return (
@@ -14,7 +14,9 @@ function App(): React.JSX.Element {
             <About />
             <Projects />
             <Experience />
+            <ProcessAndGrowth />
             <Testimonials />
+            <ServicesAndFAQ />
           </main>
           <Footer />
         </div>
