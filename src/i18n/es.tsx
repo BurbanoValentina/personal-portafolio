@@ -5,6 +5,9 @@ export const es: Translations = {
     about: "Sobre Mí",
     projects: "Proyectos",
     experience: "Experiencia",
+    services: "Servicios",
+    evolution: "Evolución",
+    certifications: "Certificados",
     testimonials: "Testimonios",
     contact: "Contacto",
   },
@@ -75,18 +78,18 @@ export const es: Translations = {
     viewCert: "Ver certificado",
     items: [
       {
-        period: "2024 - Presente",
-        title: "Estudiante de Ingeniería de Software",
-        company: "Universidad Cooperativa de Colombia - Full Stack",
-        description: "Desarrollo full-stack con React, TypeScript, SpringBoot y MongoDB. Construyendo soluciones multiplataforma con equipos multidisciplinarios.",
-        tags: ["React", "TypeScript", "SpringBoot", "MongoDB"],
-      },
-      {
-        period: "2025 - 2027",
+        period: "2025 - Presente",
         title: "Representante de Facultad de Ingeniería",
         company: "UCC - Gobierno Estudiantil + Tutorías",
         description: "Representante estudiantil electa de la Facultad de Ingeniería. Gestionando iniciativas de bienestar universitario y programas de tutorías académicas.",
         tags: ["Liderazgo", "Comunicación", "Gestión"],
+      },
+      {
+        period: "2025",
+        title: "Ajedrecista Profesional",
+        company: "Juegos ASCUN XXXII - Bucaramanga",
+        description: "Representé a la UCC en los Juegos Universitarios Nacionales ASCUN DAF. Gestionando un club de ajedrez universitario y compitiendo a nivel nacional.",
+        tags: ["Ajedrez", "Estrategia", "Competencia"],
       },
       {
         period: "2025",
@@ -96,20 +99,20 @@ export const es: Translations = {
         tags: ["Freelance", "Desarrollo Web", "UX"],
       },
       {
-        period: "2025",
-        title: "Ajedrecista Profesional",
-        company: "Juegos ASCUN XXXII — Bucaramanga",
-        description: "Representé a la UCC en los Juegos Universitarios Nacionales ASCUN DAF. Gestionando un club de ajedrez universitario y compitiendo a nivel nacional.",
-        tags: ["Ajedrez", "Estrategia", "Competencia"],
+        period: "2024 - Presente",
+        title: "Estudiante de Ingeniería de Software",
+        company: "Universidad Cooperativa de Colombia - Full Stack",
+        description: "Desarrollo full-stack con React, TypeScript, SpringBoot y MongoDB. Construyendo soluciones multiplataforma con equipos multidisciplinarios.",
+        tags: ["React", "TypeScript", "SpringBoot", "MongoDB"],
       },
     ],
     certs: [
-      { title: "Inglés B1", institution: "Servicio Nacional de Aprendizaje · Niveles 1–13", period: "2023 – 2024", description: "Completé 13 niveles de inglés en el SENA, alcanzando el nivel B1 en lectura, escritura, escucha y expresión oral.", url: "https://campusuccedu-my.sharepoint.com/:f:/r/personal/valentina_burbanos_campusucc_edu_co/Documents/Certificados/English?csf=1&web=1&e=YW9ZLE" },
-      { title: "Seminario de Ingeniería de Software", institution: "Universidad Cooperativa de Colombia", period: "2024 – 2026", description: "Participé en seminarios académicos sobre temas avanzados de ingeniería de software, arquitectura y tecnologías emergentes.", url: "https://campusuccedu-my.sharepoint.com/:f:/r/personal/valentina_burbanos_campusucc_edu_co/Documents/Certificados/Seminar?csf=1&web=1&e=Ud6CDi" },
-      { title: "Juegos Universitarios Nacionales ASCUN XXXII", institution: "Participante oficial de ajedrez — ASCUN DAF Bucaramanga 2025", period: "2025", description: "Competí como representante oficial de ajedrez de la UCC en los juegos universitarios nacionales ASCUN DAF en Bucaramanga.", url: "https://campusuccedu-my.sharepoint.com/:f:/r/personal/valentina_burbanos_campusucc_edu_co/Documents/Certificados/Chess?csf=1&web=1&e=Dn5SEo" },
+      { title: "Próximamente", institution: "Artículo de Investigación", period: "2026", description: "Un artículo de investigación actualmente en desarrollo. Los detalles se compartirán al momento de su publicación." },
+      { title: "Juegos Universitarios Nacionales ASCUN XXXII", institution: "Participante oficial de ajedrez - ASCUN DAF Bucaramanga 2025", period: "2025", description: "Competí como representante oficial de ajedrez de la UCC en los juegos universitarios nacionales ASCUN DAF en Bucaramanga.", url: "https://campusuccedu-my.sharepoint.com/:f:/r/personal/valentina_burbanos_campusucc_edu_co/Documents/Certificados/Chess?csf=1&web=1&e=Dn5SEo" },
       { title: "Monitora de Bienestar Universitario & Profesora de Ajedrez Básico", institution: "Facultad de Ingeniería de Software - UCC", period: "2025", description: "Fui Monitora de Bienestar Universitario, apoyando iniciativas de bienestar estudiantil. También trabajé como Profesora de Ajedrez Básico, enseñando estrategias y técnicas fundamentales de ajedrez.", url: "https://campusuccedu-my.sharepoint.com/:f:/r/personal/valentina_burbanos_campusucc_edu_co/Documents/Certificados/Chess%20tutor?csf=1&web=1&e=mYmZNL" },
       { title: "Otros Cursos", institution: "Ciberseguridad · UCC · Periodismo Práctico · Libre Aprendizaje", period: "2025", description: "Realicé cursos cortos en fundamentos de ciberseguridad y periodismo práctico, ampliando habilidades técnicas y de comunicación.", url: "https://campusuccedu-my.sharepoint.com/:f:/r/personal/valentina_burbanos_campusucc_edu_co/Documents/Certificados/Courses?csf=1&web=1&e=Ex8wUz" },
-      { title: "Próximamente", institution: "Artículo de Investigación", period: "2026", description: "Un artículo de investigación actualmente en desarrollo. Los detalles se compartirán al momento de su publicación." },
+      { title: "Seminario de Ingeniería de Software", institution: "Universidad Cooperativa de Colombia", period: "2024 - Presente", description: "Participé en seminarios académicos sobre temas avanzados de ingeniería de software, arquitectura y tecnologías emergentes.", url: "https://campusuccedu-my.sharepoint.com/:f:/r/personal/valentina_burbanos_campusucc_edu_co/Documents/Certificados/Seminar?csf=1&web=1&e=Ud6CDi" },
+      { title: "Inglés B1", institution: "Servicio Nacional de Aprendizaje · Niveles 1–13", period: "2023 – 2024", description: "Completé 13 niveles de inglés en el SENA, alcanzando el nivel B1 en lectura, escritura, escucha y expresión oral.", url: "https://campusuccedu-my.sharepoint.com/:f:/r/personal/valentina_burbanos_campusucc_edu_co/Documents/Certificados/English?csf=1&web=1&e=YW9ZLE" },
     ],
   },
   testimonials: {
@@ -135,6 +138,143 @@ export const es: Translations = {
         role: "Desarrollador de Software",
         initials: "JM",
       },
+    ],
+  },
+  services: {
+    label: "Servicios",
+    title1: "Soluciones que ",
+    titleHighlight: "transforman ideas.",
+    subtitle: "Desarrollo full-stack de principio a fin, desde la arquitectura hasta el despliegue. Estos son los servicios con los que puedo impulsar tu próximo proyecto.",
+    items: [
+      {
+        title: "Desarrollo Web Full Stack",
+        description: "Aplicaciones web completas y de alto rendimiento. Desde interfaces dinámicas con React y Next.js hasta APIs robustas con Spring Boot y Node.js, todo integrado, optimizado y listo para escalar.",
+        tags: ["React", "Next.js", "TypeScript", "Angular", "Tailwind CSS"],
+      },
+      {
+        title: "Aplicaciones Multiplataforma",
+        description: "Apps móviles nativas y multiplataforma que funcionan en iOS y Android desde un solo codebase. Experiencias fluidas, rendimiento nativo y diseño centrado en el usuario.",
+        tags: ["Flutter", "React Native", "Dart"],
+      },
+      {
+        title: "Backend, APIs & Bases de Datos",
+        description: "Arquitecturas backend sólidas con APIs RESTful, microservicios y bases de datos relacionales y NoSQL. Sistemas diseñados para soportar crecimiento con seguridad y eficiencia.",
+        tags: ["Java", "Spring Boot", "Node.js", "Django", "PostgreSQL", "MongoDB"],
+      },
+      {
+        title: "Videojuegos & Experiencias Interactivas",
+        description: "Videojuegos educativos y experiencias 3D interactivas que combinan mecánicas de juego con objetivos de aprendizaje. Gamificación aplicada a la educación y la visualización de datos.",
+        tags: ["Unity 3D", "C#", "Three.js", "WebGL"],
+      },
+    ],
+    faqLabel: "Preguntas frecuentes",
+    faqItems: [
+      {
+        question: "¿Estás disponible para trabajar?",
+        answer: "Sí, estoy disponible para proyectos freelance, prácticas empresariales y oportunidades laborales. Puedo trabajar de forma remota o presencial, adaptándome a diferentes zonas horarias y metodologías de trabajo.",
+      },
+      {
+        question: "¿Qué metodologías utilizas?",
+        answer: "Trabajo con metodologías ágiles como Scrum y Kanban. Aplico principios SOLID, Clean Code y patrones de diseño para garantizar código mantenible, escalable y de alta calidad.",
+      },
+      {
+        question: "¿Puedes integrarte a un equipo remoto?",
+        answer: "Absolutamente. Tengo experiencia con Git, GitHub y flujos de trabajo colaborativos. Mi rol como representante estudiantil me ha dado sólidas habilidades de comunicación, liderazgo y gestión de equipos.",
+      },
+      {
+        question: "¿Tienes experiencia con proyectos reales?",
+        answer: "Sí, he desarrollado aplicaciones full-stack desplegadas en producción, incluyendo videojuegos educativos, simuladores 3D y calculadoras interactivas. Cada proyecto incluye frontend, backend y despliegue.",
+      },
+      {
+        question: "¿Qué te diferencia de otros desarrolladores?",
+        answer: "Combino desarrollo full-stack con pensamiento estratégico del ajedrez profesional. Soy autodidacta, competitiva y busco constantemente ir más allá de los requerimientos básicos para entregar soluciones excepcionales.",
+      },
+      {
+        question: "¿Manejas tanto frontend como backend?",
+        answer: "Sí, soy desarrolladora full-stack. Construyo interfaces dinámicas con React, TypeScript y Angular, y sistemas robustos con Java, Spring Boot, Node.js y Django, integrando bases de datos SQL y NoSQL.",
+      },
+    ],
+    ctaQuestion: "¿Tienes otra pregunta?",
+    ctaDescription: "Escríbeme, respondo en menos de 24 horas.",
+    ctaButton: "Contáctame",
+  },
+  processAndGrowth: {
+    label: "Metodología & Evolución",
+    title1: "Del proceso al ",
+    titleHighlight: "progreso continuo.",
+    subtitle: "Un enfoque profesional basado en metodologías ágiles y principios SOLID, combinado con una mentalidad de crecimiento constante que me mantiene a la vanguardia.",
+    steps: [
+      {
+        title: "Requerimientos",
+        description: "Levantamiento, análisis y documentación de historias de usuario.",
+      },
+      {
+        title: "Sprint Planning",
+        description: "Planificación ágil, backlog grooming y estimación de tareas.",
+      },
+      {
+        title: "Arquitectura",
+        description: "Diseño con principios SOLID, Clean Architecture y patrones de diseño.",
+      },
+      {
+        title: "Desarrollo",
+        description: "Clean Code, TDD y desarrollo iterativo en sprints ágiles.",
+      },
+      {
+        title: "Testing & QA",
+        description: "Pruebas unitarias, de integración y aseguramiento de calidad.",
+      },
+      {
+        title: "Deploy",
+        description: "CI/CD, despliegue continuo, monitoreo y retroalimentación.",
+      },
+    ],
+    principles: [
+      { title: "Comunicación constante", description: "Actualizaciones claras en cada fase del proyecto." },
+      { title: "Iteración ágil", description: "Sprints cortos con entregas incrementales." },
+      { title: "Código escalable", description: "Arquitectura modular con principios SOLID." },
+      { title: "Entrega a tiempo", description: "Plazos realistas y compromisos cumplidos." },
+    ],
+    learningLabel: "Aprendiendo ahora",
+    learningItems: [
+      {
+        title: "Inteligencia Artificial",
+        description: "Machine learning, redes neuronales y modelos de IA aplicados al desarrollo de software.",
+        status: "active",
+        statusLabel: "Aprendiendo",
+      },
+      {
+        title: "Ciberseguridad",
+        description: "Seguridad en aplicaciones web, fundamentos de pentesting y buenas prácticas de seguridad.",
+        status: "active",
+        statusLabel: "Aprendiendo",
+      },
+      {
+        title: "Inglés Profesional",
+        description: "Programa de inglés profesional en CISCO para comunicación técnica internacional.",
+        status: "active",
+        statusLabel: "Aprendiendo",
+      },
+      {
+        title: "DevOps & CI/CD",
+        description: "Pipelines automatizados, containers y orquestación con Kubernetes.",
+        status: "soon",
+        statusLabel: "Próximamente",
+      },
+    ],
+    goalsLabel: "Metas 2026",
+    goals: [
+      { text: "Publicar portafolio profesional", detail: "React + TypeScript + Tailwind", done: true },
+      { text: "Competir en ASCUN nacional", detail: "Ajedrez - Bucaramanga 2025", done: true },
+      { text: "Cloud Architecture", detail: "AWS & Azure - Arquitecturas serverless", done: true },
+      { text: "Publicar artículo de investigación", detail: "En desarrollo - 2026", done: false },
+      { text: "Prácticas empresariales", detail: "Conseguir trabajo en prácticas profesionales", done: false },
+    ],
+    visionLabel: "Visión a futuro",
+    visionItems: [
+      { text: "Primer empleo como Dev Full Stack", detail: "Remoto o presencial" },
+      { text: "Tech Lead de proyectos", detail: "Liderar equipos frontend & backend" },
+      { text: "Crear un videojuego viral", detail: "Desarrollo indie con impacto global" },
     ],
   },
   footer: {
