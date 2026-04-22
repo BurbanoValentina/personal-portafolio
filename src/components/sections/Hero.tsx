@@ -19,7 +19,7 @@ interface SocialLink {
 
 const skills: string[] = [
   "React", "Next.js", "Java", "SpringBoot", "Angular", "Python",
-  "Django", "JavaScript", "Arduino", "C#", "HTML", "Flutter", "TypeScript",
+  "Django", "JavaScript", "Arduino", "C#", "Redis", "MySql", "Flutter", "TypeScript",
   "Node.js", "PostgreSQL", "MongoDB", "Docker", "AWS",
   "Vercel", "Tailwind CSS", "Figma", "Git", "GitHub Actions", "Azure"
 ];
