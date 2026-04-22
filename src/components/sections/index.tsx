@@ -5,3 +5,4 @@ export { Projects } from './Projects';
 export { Testimonials } from './Testimonials';
 export { ServicesAndFAQ } from './ServicesAndFAQ';
 export { ProcessAndGrowth } from './ProcessAndGrowth';
+export { Contact } from './Contact';
