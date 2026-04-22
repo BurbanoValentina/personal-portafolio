@@ -2,8 +2,7 @@ import { memo } from "react";
 import { useLang } from "@/i18n";
 import { IconWorldWww, IconDeviceMobile, IconServer, IconDeviceGamepad2 } from "@tabler/icons-react";
 import type { Icon } from "@tabler/icons-react";
-import { ServiceCard } from "./ServiceCard";
-import { FAQItem } from "./FAQItem";
+import { ServiceCard, FAQItem } from "@/components/section-items";
 
 const serviceIcons: Icon[] = [
   IconWorldWww,
