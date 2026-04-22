@@ -21,8 +21,7 @@ import {
   IconEye,
 } from "@tabler/icons-react";
 import type { Icon } from "@tabler/icons-react";
-import { ProcessStep } from "./ProcessStep";
-import { LearningCard } from "./LearningCard";
+import { ProcessStep, LearningCard } from "@/components/section-items";
 
 const stepIcons: Icon[] = [
   IconFileSearch,
@@ -49,6 +48,7 @@ const learningIcons: Icon[] = [
 
 export const ProcessAndGrowth = memo((): React.JSX.Element => {
   const { t } = useLang();
+  const orderedGoals = [...t.processAndGrowth.goals].sort((a, b) => Number(a.done) - Number(b.done));
 
   return (
     <section id="process" className="py-16 relative">
@@ -152,7 +152,7 @@ export const ProcessAndGrowth = memo((): React.JSX.Element => {
             </div>
 
             <div className="space-y-3">
-              {t.processAndGrowth.goals.map((goal, idx) => (
+              {orderedGoals.map((goal, idx) => (
                 <div key={idx} className="flex items-start gap-3">
                   {goal.done ? (
                     <IconCircleCheck className="w-5 h-5 text-primary shrink-0 mt-0.5" stroke={1.5} />
