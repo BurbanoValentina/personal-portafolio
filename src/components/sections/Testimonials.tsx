@@ -26,6 +26,9 @@ export const Testimonials = memo((): React.JSX.Element => {
               {t.testimonials.titleHighlight}
             </span>
           </h2>
+          <p className="text-sm md:text-base text-muted-foreground mt-4 max-w-2xl mx-auto">
+            {t.testimonials.subtitle}
+          </p>
         </div>
 
         {/* Testimonial Card */}
@@ -40,8 +43,13 @@ export const Testimonials = memo((): React.JSX.Element => {
             </blockquote>
 
             <div className="flex items-center gap-3 md:gap-4">
-              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-linear-to-br from-primary to-primary/50 flex items-center justify-center text-xs md:text-sm font-bold text-white">
-                {testimonials[active].initials}
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden bg-linear-to-br from-primary to-primary/50">
+                <img
+                  src={testimonials[active].avatar}
+                  alt={testimonials[active].name}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
               </div>
               <div>
                 <div className="text-sm md:text-base font-semibold">{testimonials[active].name}</div>
